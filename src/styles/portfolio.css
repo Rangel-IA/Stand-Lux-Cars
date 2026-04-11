@@ -1,0 +1,257 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   ARTEUR — Portfolio Section Styles
+   Aesthetic: High-end Gallery, Asymmetrical Grid, Minimalist Luxury
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.arteur-portfolio {
+  background-color: var(--hero-ink, #0a0a0b);
+  padding: clamp(6rem, 15vh, 12rem) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.arteur-portfolio__container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 6vw, 6rem);
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────── */
+.arteur-portfolio__header {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: clamp(4rem, 10vh, 8rem);
+}
+
+@media (min-width: 1024px) {
+  .arteur-portfolio__header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.arteur-portfolio__eyebrow {
+  display: block;
+  font-family: var(--hero-font-body, sans-serif);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 1.5rem;
+}
+
+.arteur-portfolio__title {
+  font-family: var(--hero-font-display, serif);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.arteur-portfolio__title-italic {
+  font-style: italic;
+  color: var(--hero-cream, #E9E4D0);
+}
+
+.arteur-portfolio__manifesto-box {
+  max-width: 42rem; /* 2xl equivalent */
+  text-align: left;
+}
+
+@media (min-width: 1024px) {
+  .arteur-portfolio__header-right {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.arteur-portfolio__manifesto-text {
+  font-family: var(--hero-font-body, sans-serif);
+  font-size: clamp(1rem, 1.25vw, 1.125rem); /* text-base to md:text-lg */
+  font-weight: 300; /* font-light */
+  line-height: 1.625; /* leading-relaxed */
+  letter-spacing: 0.025em; /* tracking-wide */
+  color: #ffffff;
+  margin: 0;
+}
+
+.arteur-portfolio__manifesto-text em,
+.arteur-portfolio__manifesto-text span {
+  display: block;
+}
+
+.intro-line {
+  font-style: italic;
+  margin-bottom: 0.25rem; /* mb-1 */
+}
+
+.headline-line {
+  margin-bottom: 0.25rem; /* mb-1 */
+}
+
+.headline-line .high-contrast {
+  font-family: var(--hero-font-display, serif);
+  font-size: calc(1.05em + 8px);
+  font-weight: 400;
+  color: #e9e4d0;
+}
+
+.secondary-line {
+  font-style: italic;
+}
+
+
+/* ── Grid ───────────────────────────────────────────────────────────────── */
+.arteur-portfolio__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .arteur-portfolio__grid {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 5vw);
+  }
+}
+
+/* Card 1: Large Main */
+.arteur-portfolio__card--1 {
+  grid-column: 1 / 13;
+  grid-row: 1 / 10;
+}
+
+@media (min-width: 1024px) {
+  .arteur-portfolio__card--1 {
+    grid-column: 1 / 8;
+    grid-row: 1 / 12;
+  }
+}
+
+/* Card 2: Vertical Secondary */
+.arteur-portfolio__card--2 {
+  grid-column: 1 / 13;
+}
+
+@media (min-width: 1024px) {
+  .arteur-portfolio__card--2 {
+    grid-column: 8 / 13;
+    grid-row: 2 / 7;
+  }
+}
+
+/* Card 3: Horizontal Bottom Offset */
+.arteur-portfolio__card--3 {
+  grid-column: 1 / 13;
+}
+
+@media (min-width: 1024px) {
+  .arteur-portfolio__card--3 {
+    grid-column: 8 / 13;
+    grid-row: 8 / 13;
+  }
+}
+
+.arteur-portfolio__image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #111;
+  aspect-ratio: 16/9;
+}
+
+@media (min-width: 768px) {
+  .arteur-portfolio__image-container {
+    aspect-ratio: auto;
+  }
+}
+
+.arteur-portfolio__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  filter: grayscale(20%) brightness(0.8);
+}
+
+.arteur-portfolio__card:hover .arteur-portfolio__image {
+  transform: scale(1.05);
+  filter: grayscale(0%) brightness(1);
+}
+
+/* Overlay elements */
+.arteur-portfolio__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 40%);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.arteur-portfolio__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.arteur-portfolio__id {
+  font-family: var(--hero-font-display, serif);
+  font-size: 0.75rem;
+  color: var(--hero-cream, #E9E4D0);
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.2rem;
+}
+
+.arteur-portfolio__category {
+  font-family: var(--hero-font-body, sans-serif);
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.5);
+  writing-mode: vertical-rl;
+}
+
+.arteur-portfolio__card-title {
+  font-family: var(--hero-font-display, serif);
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.arteur-portfolio__card-subtitle {
+  font-family: var(--hero-font-body, sans-serif);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--hero-cream, #E9E4D0);
+}
+
+/* ── Footer ─────────────────────────────────────────────────────────────── */
+.arteur-portfolio__footer {
+  margin-top: clamp(4rem, 8vh, 6rem);
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.arteur-portfolio__line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.arteur-portfolio__footer-text {
+  font-family: var(--hero-font-body, sans-serif);
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,130 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   ARTEUR — Final Statement Section
+   Aesthetic: Cinematic, Authoritative, Brutalist Luxury
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.arteur-statement {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #000;
+  padding: clamp(6rem, 12vh, 10rem) 0;
+}
+
+.arteur-statement__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect */
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+.arteur-statement__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+.arteur-statement__container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 8vw, 8rem);
+  text-align: center;
+}
+
+.arteur-statement__content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.arteur-statement__title {
+  font-family: var(--hero-font-display, serif);
+  font-size: clamp(2.2rem, 4.5vw, 4rem);
+  line-height: 1.1;
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: clamp(3rem, 6vh, 5rem);
+  letter-spacing: -0.02em;
+}
+
+.arteur-statement__title .highlight {
+  color: var(--hero-cream, #E9E4D0);
+  font-style: italic;
+}
+
+/* ── Grid Info ──────────────────────────────────────────────────────────── */
+.arteur-statement__grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .arteur-statement__grid {
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+  }
+}
+
+.arteur-statement__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.arteur-statement__label {
+  font-family: var(--hero-font-body, sans-serif);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--hero-cream, #E9E4D0);
+  opacity: 0.95;
+}
+
+.arteur-statement__text {
+  font-family: var(--hero-font-body, sans-serif);
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.05em;
+}
+
+.arteur-statement__divider {
+  width: 40px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 768px) {
+  .arteur-statement__divider {
+    width: 1px;
+    height: 40px;
+  }
+}
+
+.arteur-statement__final {
+  font-family: var(--hero-font-body, sans-serif);
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 2rem;
+}
+
+.arteur-statement__final .italic {
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.85);
+}

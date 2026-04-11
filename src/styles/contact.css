@@ -1,0 +1,368 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   ARTEUR — Contact & Form Styles
+   Aesthetic: Minimalist, Structured, High-Performance
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.arteur-contact {
+  position: relative;
+  background-color: var(--hero-ink, #0a0a0b);
+  padding: clamp(6rem, 15vh, 12rem) 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.arteur-contact__bg-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.03), transparent);
+  pointer-events: none;
+}
+
+.arteur-contact__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 6vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 3vw, 2.5rem); /* Extremely tight gap for integrated flow */
+}
+
+/* ── Header ─────────────────────────────────────────────────────────────── */
+.arteur-contact__header {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-bottom: clamp(4rem, 8vw, 6rem);
+}
+
+@media (min-width: 1024px) {
+  .arteur-contact__header {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 6rem;
+    align-items: flex-end;
+    text-align: left;
+  }
+}
+
+.arteur-contact__eyebrow {
+  display: block;
+  font-family: var(--hero-font-body, sans-serif);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--hero-cream, #E9E4D0);
+  margin-bottom: 2rem;
+  opacity: 0.85; /* Increased visibility */
+}
+
+.arteur-contact__title {
+  font-family: var(--hero-font-display, serif);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+}
+
+.arteur-contact__title-italic {
+  font-style: italic;
+  color: var(--hero-cream, #E9E4D0);
+}
+
+.arteur-contact__header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.arteur-contact__description {
+  font-family: var(--hero-font-body, sans-serif);
+  font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 500px;
+  text-align: justify;
+  letter-spacing: 0.04em;
+  hyphens: auto;
+}
+
+@media (min-width: 1024px) {
+  .arteur-contact__description {
+    margin-bottom: 0.5rem; /* Optical alignment with title baseline */
+  }
+}
+
+/* ── Form Layout ────────────────────────────────────────────────────────── */
+.arteur-contact__form-wrap {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.arteur-contact__form-inner {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: clamp(2rem, 6vw, 4rem);
+  backdrop-filter: blur(10px);
+}
+
+.arteur-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.arteur-form__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 640px) {
+  .arteur-form__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.arteur-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.arteur-form__label {
+  font-family: var(--hero-font-body, sans-serif);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5); /* Increased visibility */
+  margin-bottom: 0.2rem;
+}
+
+.arteur-form__input,
+.arteur-form__textarea {
+  background: rgba(255, 255, 255, 0.035);
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.2rem 1.5rem;
+  font-family: var(--hero-font-body, sans-serif);
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #ffffff;
+  outline: none;
+  transition: all 0.4s ease;
+}
+
+.arteur-form__input::placeholder,
+.arteur-form__textarea::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.arteur-form__textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.arteur-form__input:focus,
+.arteur-form__textarea:focus {
+  border-color: var(--hero-cream, #E9E4D0);
+  background: rgba(255, 255, 255, 0.06);
+  padding-left: 1.8rem;
+}
+
+.arteur-form__input.has-error,
+.arteur-form__textarea.has-error {
+  border-color: rgba(255, 100, 100, 0.4);
+}
+
+.arteur-form__error {
+  font-family: var(--hero-font-body, sans-serif);
+  font-size: 0.6rem;
+  color: rgba(255, 100, 100, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ── Budget Grid ────────────────────────────────────────────────────────── */
+.arteur-budget-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .arteur-budget-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.arteur-budget-card {
+  cursor: pointer;
+  position: relative;
+}
+
+.arteur-budget-card__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s ease;
+}
+
+.arteur-budget-card:hover .arteur-budget-card__inner {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.arteur-budget-card input:checked + .arteur-budget-card__inner {
+  border-color: var(--hero-cream, #E9E4D0);
+  background: rgba(233, 228, 208, 0.05);
+}
+
+.arteur-budget-card__title {
+  display: block;
+  font-family: var(--hero-font-body, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.arteur-budget-card__desc {
+  font-family: var(--hero-font-body, sans-serif);
+  font-size: 0.65rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6); /* Increased visibility */
+  line-height: 1.4;
+}
+
+.arteur-budget-card__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+.arteur-budget-card input:checked + .arteur-budget-card__inner .arteur-budget-card__dot {
+  background: var(--hero-cream, #E9E4D0);
+  border-color: var(--hero-cream, #E9E4D0);
+  box-shadow: 0 0 10px rgba(233, 228, 208, 0.4);
+}
+
+.arteur-spinner {
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: arteur-spin 0.8s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes arteur-spin {
+  to { transform: rotate(360deg); }
+}
+
+.arteur-form__footer-text {
+  text-align: center;
+  font-family: var(--hero-font-body, sans-serif);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.4); /* Increased visibility */
+  text-transform: uppercase;
+}
+
+/* ── Modal ─────────────────────────────────────────────────────────────── */
+.arteur-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(15px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.arteur-modal-content {
+  position: relative;
+  background: #0a0a0b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 480px;
+  padding: 4rem 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arteur-modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  color: rgba(255, 255, 255, 0.4);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.arteur-modal-close:hover {
+  color: #ffffff;
+}
+
+.arteur-modal-icon-wrap {
+  margin-bottom: 2rem;
+  opacity: 0.8;
+}
+
+.arteur-modal-title {
+  font-family: var(--hero-font-display, serif);
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.arteur-modal-text {
+  font-family: var(--hero-font-body, sans-serif);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 2.5rem;
+}
+
+.arteur-modal-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  padding: 1rem 2rem;
+  font-family: var(--hero-font-body, sans-serif);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.arteur-modal-btn:hover {
+  background: #ffffff;
+  color: #000;
+  border-color: #ffffff;
+}

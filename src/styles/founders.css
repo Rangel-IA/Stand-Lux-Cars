@@ -1,0 +1,225 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   ARTEUR — Founders Section Styles
+   Aesthetic: High-fashion editorial, structured, slightly asymmetrical
+   ─────────────────────────────────────────────────────────────────────────── */
+
+   .arteur-founders {
+    position: relative;
+    background-color: var(--hero-ink, #0a0a0b);
+    padding: clamp(6rem, 15vh, 12rem) 0;
+    overflow: hidden;
+    /* Subtle separation from previous section */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  
+  /* Optional heavy grain if desired. We use a darker tone to keep it moody */
+  .arteur-founders::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% -20%, rgba(233, 228, 208, 0.03) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .arteur-founders__container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 clamp(1.5rem, 6vw, 6rem);
+  }
+  
+  /* ── Header ─────────────────────────────────────────────────────────────── */
+  .arteur-founders__header {
+    text-align: center;
+    margin-bottom: clamp(5rem, 12vh, 10rem);
+  }
+  
+  .arteur-founders__eyebrow {
+    display: inline-block;
+    font-family: var(--hero-font-body, sans-serif);
+    font-size: clamp(0.55rem, 0.8vw, 0.65rem);
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .arteur-founders__eyebrow::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 1rem auto 0;
+  }
+  
+  .arteur-founders__title {
+    font-family: var(--hero-font-display, serif);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  
+  .arteur-founders__title-accent {
+    font-style: italic;
+    color: var(--hero-cream, #E9E4D0);
+  }
+  
+  /* ── Grid ───────────────────────────────────────────────────────────────── */
+  .arteur-founders__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(5rem, 10vw, 8rem);
+  }
+  
+  @media (min-width: 860px) {
+    .arteur-founders__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: clamp(4rem, 8vw, 8rem);
+      align-items: start;
+    }
+  }
+  
+  /* ── Founder Card ───────────────────────────────────────────────────────── */
+  .arteur-founders__card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* Keep width constrained for elegance */
+    max-width: 34rem;
+    margin: 0 auto;
+  }
+  
+  @media (min-width: 860px) {
+    .arteur-founders__card--offset {
+      /* Vertical offset to disrupt the baseline and create an asymmetrical flow */
+      margin-top: clamp(4rem, 18vh, 12rem);
+    }
+  }
+  
+  /* Image wrapper */
+  .arteur-founders__image-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    background: #111;
+  }
+  
+  /* Inner wrapper to hold parallax movement */
+  .arteur-founders__image-inner {
+    width: 100%;
+    height: 120%; /* Extra height to allow scrolling space */
+    position: absolute;
+    top: -10%;
+    left: 0;
+  }
+  
+  .arteur-founders__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(1.15) brightness(0.9);
+    transition: filter 1s ease, transform 1s ease;
+  }
+  
+  .arteur-founders__card:hover .arteur-founders__image {
+    /* Subtle color bleed upon hover */
+    filter: grayscale(20%) contrast(1.1) brightness(1);
+  }
+  
+  /* ── Decorative crop marks on the images ────────────────────────────────── */
+  .arteur-founders__frame-mark {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-color: rgba(233, 228, 208, 0.4);
+    border-style: solid;
+    pointer-events: none;
+    z-index: 10;
+    transition: border-color 0.5s ease;
+  }
+  
+  .arteur-founders__card:hover .arteur-founders__frame-mark {
+    border-color: rgba(233, 228, 208, 0.9);
+  }
+  
+  .arteur-founders__frame-mark.top-left {
+    top: 1.5rem;
+    left: 1.5rem;
+    border-width: 1px 0 0 1px;
+  }
+  
+  .arteur-founders__frame-mark.bottom-right {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    border-width: 0 1px 1px 0;
+  }
+  
+  .arteur-founders__frame-mark.top-right {
+    top: 1.5rem;
+    right: 1.5rem;
+    border-width: 1px 1px 0 0;
+  }
+  
+  .arteur-founders__frame-mark.bottom-left {
+    bottom: 1.5rem;
+    left: 1.5rem;
+    border-width: 0 0 1px 1px;
+  }
+  
+  /* ── Content ────────────────────────────────────────────────────────────── */
+  .arteur-founders__content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .arteur-founders__name {
+    font-family: var(--hero-font-display, serif);
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+  
+  .arteur-founders__role {
+    font-family: var(--hero-font-body, sans-serif);
+    font-size: clamp(0.6rem, 1vw, 0.7rem);
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--hero-cream, #E9E4D0);
+  }
+  
+  /* Horizontal divider to ground the bio text */
+  .arteur-founders__divider {
+    height: 1px;
+    width: 3rem;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 1.5rem 0;
+  }
+  
+  .arteur-founders__bio {
+    font-family: var(--hero-font-body, sans-serif);
+    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+    font-weight: 300;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.55);
+    transition: color 0.5s ease;
+    text-align: justify;
+    letter-spacing: 0.04em;
+    hyphens: auto;
+  }
+  
+  .arteur-founders__card:hover .arteur-founders__bio {
+    color: rgba(255, 255, 255, 0.85);
+  }
