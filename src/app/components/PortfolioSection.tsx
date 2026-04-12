@@ -32,6 +32,29 @@ const portfolioItems = [
 ];
 
 export default function PortfolioSection() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0,
+      transition: { 
+        duration: 0.8, 
+        ease: [0.22, 1, 0.36, 1] 
+      }
+    }
+  };
+
   return (
     <section id="portifolio" className="arteur-portfolio" aria-label="Portfólio ARTEUR">
       <div className="arteur-portfolio__container">
@@ -62,15 +85,18 @@ export default function PortfolioSection() {
         </header>
 
         {/* ── Portfolio Grid ─────────────────────────────────────────── */}
-        <div className="arteur-portfolio__grid">
+        <motion.div 
+          className="arteur-portfolio__grid"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-20%" }}
+        >
           {portfolioItems.map((item, index) => (
             <motion.article 
               key={item.id}
               className={`arteur-portfolio__card arteur-portfolio__card--${index + 1}`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 1, delay: index * 0.2, ease: [0.22, 1, 0.36, 1] }}
+              variants={itemVariants}
             >
               <div className="arteur-portfolio__image-container">
                 <img src={item.image} alt={item.subtitle} className="arteur-portfolio__image" />
@@ -87,7 +113,7 @@ export default function PortfolioSection() {
               </div>
             </motion.article>
           ))}
-        </div>
+        </motion.div>
         
         {/* ── Visual Footer ─────────────────────────────────────────── */}
         <footer className="arteur-portfolio__footer">
