@@ -13,16 +13,14 @@ export default function WhatsappWidget() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   useEffect(() => {
-    if (!isMobile) return;
+    if (isMobile) return;
 
     let scrollTimeout;
     const handleScroll = () => {
@@ -48,22 +46,18 @@ export default function WhatsappWidget() {
 
   const handleMouseEnter = () => {
     setIsHovered(true);
-    if (!isMobile) {
-      setShowTooltip(true);
-    }
+    if (!isMobile) setShowTooltip(true);
   };
 
   const handleMouseLeave = () => {
     setIsHovered(false);
-    if (!isMobile) {
-      setShowTooltip(false);
-    }
+    if (!isMobile) setShowTooltip(false);
   };
 
   return (
     <div className="arteur-whatsapp-widget">
       <AnimatePresence mode="wait">
-        {showTooltip && (
+        {!isMobile && showTooltip && (
           <motion.div
             className="arteur-whatsapp-tooltip"
             initial={{ opacity: 0, y: 10, scale: 0.95 }}
