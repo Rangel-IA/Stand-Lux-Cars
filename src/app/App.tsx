@@ -23,14 +23,8 @@ import Header from './components/Header';
 import '../styles/header.css';
 import WhatsappWidget from './components/WhatsappWidget';
 import './components/WhatsappWidget.css';
-
-function ExpertisePlaceholder() {
-  return (
-    <div style={{ minHeight: '100vh', paddingTop: '100px', textAlign: 'center', color: '#fff', background: '#0a0a0b' }}>
-      <h1>Página em Construção</h1>
-    </div>
-  );
-}
+import ExpertisePage from './pages/ExpertisePage';
+import './pages/ExpertisePage.css';
 
 export default function App() {
   return (
@@ -48,7 +42,7 @@ export default function App() {
             <StatementSection />
           </>
         } />
-        <Route path="/expertise" element={<ExpertisePlaceholder />} />
+        <Route path="/expertise" element={<ExpertisePage />} />
       </Routes>
       <Footer />
       <WhatsappWidget />
