@@ -8,24 +8,24 @@ const comparisons = [
     id: 1,
     title: 'Ferrari Amalfi Spider',
     subtitle: 'AI Precision Enhancement',
-    before: '/assets/ferrari_amalfi_spider.webp',
-    after: '/assets/ferrari_amalfi_spider-d.webp',
+    before: '/assets/exp_amalfi_before.webp',
+    after: '/assets/exp_amalfi_after.webp',
     description: 'Curadoria humana refina a iluminação original, revelando texturas e linhas icônicas que passam despercebidas na captura bruta. Cada superfície é otimizada para precisão editorial.'
   },
   {
     id: 2,
     title: 'Ferrari F40',
     subtitle: 'Engineering Prompt',
-    before: '/assets/ferrari-f40.webp',
-    after: '/assets/ferrari-f40-d.webp',
+    before: '/assets/exp_f40_before.webp',
+    after: '/assets/exp_f40_after.webp',
     description: 'Engenharia de prompt preserva a autenticidade do modelo original enquanto eleva a apresentação visual para o padrão editorial de luxo. A síntese mantém a integridade da forma icônica.'
   },
   {
     id: 3,
     title: 'Ferrari Portofino',
     subtitle: 'Color Grading Intelligence',
-    before: '/assets/ferrari-portofino.webp',
-    after: '/assets/ferrari-portofino-d.webp',
+    before: '/assets/exp_portofino_before.webp',
+    after: '/assets/exp_portofino_after.webp',
     description: 'Recontextualização estratégica com gradação de cor que transforma uma fotografia técnica em ativo de marca premium. A IA entende contexto luxury, não apenas pixels.'
   }
 ];
@@ -33,6 +33,9 @@ const comparisons = [
 function ComparisonSlider({ comparison }: { comparison: typeof comparisons[0] }) {
   const [sliderPosition, setSliderPosition] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
+  
+  const beforeSrc = comparison.before;
+  const afterSrc = comparison.after;
 
   const handleMove = (e: React.MouseEvent | React.TouchEvent) => {
     if (!containerRef.current) return;
@@ -63,7 +66,7 @@ function ComparisonSlider({ comparison }: { comparison: typeof comparisons[0] })
         onTouchMove={handleMove}
       >
         <div className="expertise-comparison__image expertise-comparison__image--before">
-          <img src={comparison.before} alt={`${comparison.title} Original`} />
+          <img src={beforeSrc} alt={`${comparison.title} Original`} />
           <span className="expertise-comparison__label">Original</span>
         </div>
         
@@ -71,7 +74,7 @@ function ComparisonSlider({ comparison }: { comparison: typeof comparisons[0] })
           className="expertise-comparison__image expertise-comparison__image--after"
           style={{ clipPath: `inset(0 0 0 ${sliderPosition}%)` }}
         >
-          <img src={comparison.after} alt={`${comparison.title} Processado`} />
+          <img src={afterSrc} alt={`${comparison.title} Processado`} />
           <span className="expertise-comparison__label">Processado</span>
         </div>
 
