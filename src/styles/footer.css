@@ -5,7 +5,7 @@
 
 .arteur-footer {
   position: relative;
-  background-color: #d5d1bf; /* Light Cream Requested */
+  background-color: #d5d1bf;
   padding: clamp(4rem, 10vh, 10rem) 0 4rem;
   overflow: hidden;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
@@ -17,14 +17,18 @@
   left: 50%;
   transform: translateX(-50%);
   font-family: var(--hero-font-display, serif);
-  font-size: clamp(10rem, 30vw, 40rem);
+  font-size: clamp(6rem, 25vw, 40rem);
+  max-width: 90%;
+  width: auto;
+  height: auto;
   font-weight: 300;
-  color: rgba(0, 0, 0, 0.035); /* Subtle Dark Watermark */
+  color: rgba(0, 0, 0, 0.035);
   line-height: 0.8;
   letter-spacing: -0.05em;
   user-select: none;
   pointer-events: none;
   z-index: 0;
+  text-align: center;
 }
 
 .arteur-footer__container {
@@ -34,6 +38,7 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 clamp(1.5rem, 8vw, 8rem);
+  overflow-x: hidden;
 }
 
 .arteur-footer__main {

@@ -6,18 +6,11 @@
 .arteur-contact {
   position: relative;
   background-color: var(--hero-ink, #0a0a0b);
+  background-size: cover;
+  background-position: center;
   padding: clamp(6rem, 15vh, 12rem) 0;
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.arteur-contact__bg-line {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.03), transparent);
-  pointer-events: none;
 }
 
 .arteur-contact__container {
@@ -25,9 +18,10 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 clamp(1.5rem, 6vw, 4rem);
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  gap: clamp(1rem, 3vw, 2.5rem); /* Extremely tight gap for integrated flow */
+  gap: clamp(1rem, 3vw, 2.5rem);
 }
 
 /* ── Header ─────────────────────────────────────────────────────────────── */
