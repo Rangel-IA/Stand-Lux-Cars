@@ -278,22 +278,26 @@
   font-weight: 500;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--hero-ink);
-  background: var(--hero-cream);
+  color: var(--hero-cream);
+  background: var(--hero-ink);
   text-decoration: none;
   overflow: hidden;
-  transition: color 0.55s ease;
+  transition: color 0.55s ease, background 0.55s ease;
   isolation: isolate;
 }
 
 .arteur-hero__cta-bg {
   position: absolute;
   inset: 0;
-  background: #fff;
+  background: var(--hero-cream);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
   z-index: -1;
+}
+
+.arteur-hero__cta:hover {
+  color: var(--hero-ink);
 }
 
 .arteur-hero__cta:hover .arteur-hero__cta-bg { transform: scaleX(1); }

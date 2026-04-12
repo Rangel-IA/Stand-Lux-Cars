@@ -143,17 +143,18 @@
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem;
-    border: 1px solid rgba(233, 228, 208, 0.2);
-    background: transparent;
+    border: 1px solid rgba(233, 228, 208, 0.4);
+    background: var(--hero-ink);
     text-decoration: none;
     overflow: hidden;
-    transition: border-color 0.4s ease;
+    transition: border-color 0.4s ease, background 0.4s ease;
   }
   
   .arteur-subheader__cta:hover {
     border-color: rgba(233, 228, 208, 0.8);
+    background: var(--hero-cream);
   }
-  
+
   .arteur-subheader__cta-text {
     position: relative;
     z-index: 2;
@@ -162,12 +163,12 @@
     font-weight: 500;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: #ffffff;
+    color: var(--hero-cream);
     transition: color 0.4s ease;
   }
   
   .arteur-subheader__cta:hover .arteur-subheader__cta-text {
-    color: var(--hero-ink, #0a0a0b);
+    color: var(--hero-ink);
   }
   
   .arteur-subheader__cta-arrow-box {
@@ -179,36 +180,36 @@
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.08);
     transition: background 0.4s ease, transform 0.4s ease;
   }
-  
+
+  .arteur-subheader__cta:hover .arteur-subheader__cta-arrow-box {
+    background: var(--hero-ink);
+    transform: translateX(4px);
+  }
+
   .arteur-subheader__cta-icon {
     width: 1rem;
     height: 1rem;
-    color: var(--hero-cream, #E9E4D0);
+    color: var(--hero-cream);
     transition: color 0.4s ease;
   }
-  
-  .arteur-subheader__cta:hover .arteur-subheader__cta-arrow-box {
-    background: var(--hero-ink, #0a0a0b);
-    transform: translateX(4px);
-  }
-  
+
   .arteur-subheader__cta:hover .arteur-subheader__cta-icon {
-    color: var(--hero-cream, #E9E4D0);
+    color: var(--hero-ink);
   }
-  
+
   .arteur-subheader__cta-hover-bg {
     position: absolute;
     inset: 0;
-    background: var(--hero-cream, #E9E4D0);
+    background: var(--hero-cream);
     transform: scaleY(0);
     transform-origin: bottom;
     transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
     z-index: 1;
   }
-  
+
   .arteur-subheader__cta:hover .arteur-subheader__cta-hover-bg {
     transform: scaleY(1);
   }
