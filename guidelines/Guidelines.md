@@ -29,6 +29,31 @@ For example:
 
 ---
 
+# CSS/JSX Refactoring Protocol (OBRIGATÓRIO)
+
+Antes de qualquer refatoração que envolva CSS ou JSX, você DEVE seguir:
+
+## 1. Análise Prévia
+Liste todos os elementos que serão afetados:
+- Animações (keyframes, framer-motion, transitions)
+- Elementos de Copy (textos, labels, placeholders)
+- Classes CSS (especialmente CTAs, botões, indicadores)
+
+## 2. Confirmação Explícita
+- Apresente a lista ao usuário
+- Aguarde confirmação antes de modificar
+- NEVER altere sem aprovação
+
+## 3. Regra de Segurança
+- **NUNCA remova fallbacks de cores** (ex: `var(--cor, #hex)` → mantém o valor fixo)
+- Mantenha valores hardcoded como fallback em variáveis CSS
+- Preserve todas as classes locais nos componentes
+
+## 4. Rollback Imediato
+Se houver regressão visual, reverta imediatamente para o último commit estável.
+
+---
+
 # Design system guidelines
 
 Rules for how the AI should make generations look like your company's design system
