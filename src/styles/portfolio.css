@@ -4,10 +4,51 @@
    ─────────────────────────────────────────────────────────────────────────── */
 
 .arteur-portfolio {
-  background-color: var(--hero-ink, #0a0a0b);
+  background-color: var(--hero-ink);
   padding: clamp(6rem, 15vh, 12rem) 0;
   position: relative;
   overflow: hidden;
+}
+
+.arteur-portfolio__eyebrow {
+  display: block;
+  font-family: var(--hero-font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 1.5rem;
+}
+
+.arteur-portfolio__title {
+  font-family: var(--hero-font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 300;
+  color: var(--color-arteur-white);
+  line-height: 1.1;
+}
+
+.arteur-portfolio__title-italic {
+  font-style: italic;
+  color: var(--hero-cream);
+}
+
+.arteur-portfolio__manifesto-text {
+  font-family: var(--hero-font-body);
+  font-size: clamp(1rem, 1.25vw, 1.125rem);
+  font-weight: 300;
+  line-height: 1.625;
+  letter-spacing: 0.025em;
+  color: var(--color-arteur-white);
+  margin: 0;
+}
+
+.headline-line .high-contrast {
+  font-family: var(--hero-font-display);
+  font-size: calc(1.05em + 8px);
+  font-weight: 400;
+  color: #e9e4d0;
 }
 
 .arteur-portfolio__container {
@@ -203,35 +244,35 @@
 }
 
 .arteur-portfolio__id {
-  font-family: var(--hero-font-display, serif);
+  font-family: var(--hero-font-display);
   font-size: 0.75rem;
-  color: var(--hero-cream, #E9E4D0);
+  color: var(--hero-cream);
   border-bottom: 1px solid currentColor;
   padding-bottom: 0.2rem;
 }
 
 .arteur-portfolio__category {
-  font-family: var(--hero-font-body, sans-serif);
+  font-family: var(--hero-font-body);
   font-size: 0.55rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-muted-foreground);
   writing-mode: vertical-rl;
 }
 
 .arteur-portfolio__card-title {
-  font-family: var(--hero-font-display, serif);
+  font-family: var(--hero-font-display);
   font-size: clamp(1.5rem, 2.5vw, 2rem);
-  color: #ffffff;
+  color: var(--color-arteur-white);
   margin-bottom: 0.5rem;
 }
 
 .arteur-portfolio__card-subtitle {
-  font-family: var(--hero-font-body, sans-serif);
+  font-family: var(--hero-font-body);
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--hero-cream, #E9E4D0);
+  color: var(--hero-cream);
 }
 
 /* ── Footer ─────────────────────────────────────────────────────────────── */
@@ -249,7 +290,7 @@
 }
 
 .arteur-portfolio__footer-text {
-  font-family: var(--hero-font-body, sans-serif);
+  font-family: var(--hero-font-body);
   font-size: 0.6rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;

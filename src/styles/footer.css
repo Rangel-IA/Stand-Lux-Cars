@@ -5,10 +5,89 @@
 
 .arteur-footer {
   position: relative;
-  background-color: #d5d1bf; /* Light Cream Requested */
+  background-color: #d5d1bf;
   padding: clamp(4rem, 10vh, 10rem) 0 4rem;
   overflow: hidden;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.arteur-footer__watermark {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--hero-font-display);
+  font-size: clamp(10rem, 30vw, 40rem);
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.035);
+  line-height: 0.8;
+  letter-spacing: -0.05em;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.arteur-footer__tagline {
+  font-family: var(--hero-font-display);
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: #1a1a1a;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.arteur-footer__col-label {
+  font-family: var(--hero-font-body);
+  font-size: 0.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.arteur-footer__about-text {
+  font-family: var(--hero-font-body);
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #333333;
+  text-align: justify;
+}
+
+.arteur-footer__nav-list a {
+  font-family: var(--hero-font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #444444;
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+}
+
+.arteur-footer__nav-list a:hover {
+  color: #000000;
+  padding-left: 0.5rem;
+}
+
+.arteur-footer__copyright {
+  font-family: var(--hero-font-body);
+  font-size: 0.65rem;
+  color: #666666;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.arteur-footer__label-pill {
+  font-family: var(--hero-font-body);
+  font-size: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #444444;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
 }
 
 .arteur-footer__watermark {

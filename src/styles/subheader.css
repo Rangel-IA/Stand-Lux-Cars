@@ -3,222 +3,115 @@
    Aesthetic: High-fashion editorial, clean, typography-focused.
    ─────────────────────────────────────────────────────────────────────────── */
 
-   .arteur-subheader {
-    position: relative;
-    background-color: var(--hero-ink, #0a0a0b);
-    padding: clamp(6rem, 12vh, 12rem) 0;
-    overflow: hidden;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  }
-  
-  /* Large faded typography in background */
-  .arteur-subheader__bg-text {
-    position: absolute;
-    top: 0;
-    left: 5%;
-    font-family: var(--hero-font-display, 'Cormorant Garamond', serif);
-    font-size: clamp(10rem, 25vw, 30rem);
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.02);
-    line-height: 0.8;
-    user-select: none;
-    pointer-events: none;
-    z-index: 0;
-    letter-spacing: -0.05em;
-  }
-  
-  .arteur-subheader__container {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 clamp(1.5rem, 8vw, 8rem);
-  }
-  
-  .arteur-subheader__content {
-    display: flex;
-    flex-direction: column;
-    gap: clamp(4rem, 8vw, 8rem);
-  }
-  
-  @media (min-width: 1024px) {
-    .arteur-subheader__content {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
-  }
-  
-  /* ── Statement ───────────────────────────────────────────────────────────── */
-  .arteur-subheader__statement-wrap {
-    flex: 1;
-    max-width: 800px;
-    position: relative;
-  }
-  
-  .arteur-subheader__dropcap {
-    float: left;
-    font-family: var(--hero-font-display, 'Cormorant Garamond', serif);
-    font-size: clamp(6rem, 10vw, 8.5rem);
-    line-height: 0.75;
-    padding-top: 0.12em;
-    padding-right: 0.15em;
-    padding-bottom: 0.1em;
-    color: var(--hero-cream, #E9E4D0);
-    font-weight: 300;
-  }
-  
-  .arteur-subheader__statement {
-    font-family: var(--hero-font-body, 'DM Sans', sans-serif);
-    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
-    font-weight: 300;
-    line-height: 1.8;
-    color: rgba(255, 255, 255, 0.6);
-    text-align: justify;
-  }
-  
-  .arteur-subheader__statement .highlight {
-    color: #ffffff;
-    font-weight: 400;
-  }
-  
-  .arteur-subheader__statement .italic {
-    font-family: var(--hero-font-display, 'Cormorant Garamond', serif);
-    font-style: italic;
-    font-size: 1.25em; /* Compensate for x-height difference */
-    letter-spacing: 0.02em;
-    color: rgba(255, 255, 255, 0.85);
-  }
-  
-  .arteur-subheader__statement .italic.highlight {
-    color: var(--hero-cream, #E9E4D0);
-  }
-  
-  /* ── Action Area ─────────────────────────────────────────────────────────── */
-  .arteur-subheader__action-wrap {
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    position: relative;
-  }
-  
-  @media (min-width: 1024px) {
-    .arteur-subheader__action-wrap {
-      width: clamp(280px, 20vw, 360px);
-      padding-left: clamp(2rem, 4vw, 4rem);
-    }
-  }
-  
-  .arteur-subheader__divider {
-    display: none;
-  }
-  
-  @media (min-width: 1024px) {
-    .arteur-subheader__divider {
-      display: block;
-      position: absolute;
-      left: 0;
-      top: -10%;
-      bottom: -10%;
-      width: 1px;
-      background: linear-gradient(
-        to bottom,
-        transparent,
-        rgba(255, 255, 255, 0.1) 20%,
-        rgba(255, 255, 255, 0.1) 80%,
-        transparent
-      );
-    }
-  }
-  
-  .arteur-subheader__cta-container {
-    display: inline-block;
-  }
-  
-  .arteur-subheader__cta {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem;
-    border: 1px solid rgba(233, 228, 208, 0.2);
-    background: transparent;
-    text-decoration: none;
-    overflow: hidden;
-    transition: border-color 0.4s ease;
-  }
-  
-  .arteur-subheader__cta:hover {
-    border-color: rgba(233, 228, 208, 0.8);
-  }
-  
-  .arteur-subheader__cta-text {
-    position: relative;
-    z-index: 2;
-    font-family: var(--hero-font-body, sans-serif);
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: #ffffff;
-    transition: color 0.4s ease;
-  }
-  
-  .arteur-subheader__cta:hover .arteur-subheader__cta-text {
-    color: var(--hero-ink, #0a0a0b);
-  }
-  
-  .arteur-subheader__cta-arrow-box {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.05);
-    transition: background 0.4s ease, transform 0.4s ease;
-  }
-  
-  .arteur-subheader__cta-icon {
-    width: 1rem;
-    height: 1rem;
-    color: var(--hero-cream, #E9E4D0);
-    transition: color 0.4s ease;
-  }
-  
-  .arteur-subheader__cta:hover .arteur-subheader__cta-arrow-box {
-    background: var(--hero-ink, #0a0a0b);
-    transform: translateX(4px);
-  }
-  
-  .arteur-subheader__cta:hover .arteur-subheader__cta-icon {
-    color: var(--hero-cream, #E9E4D0);
-  }
-  
-  .arteur-subheader__cta-hover-bg {
-    position: absolute;
-    inset: 0;
-    background: var(--hero-cream, #E9E4D0);
-    transform: scaleY(0);
-    transform-origin: bottom;
-    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
-    z-index: 1;
-  }
-  
-  .arteur-subheader__cta:hover .arteur-subheader__cta-hover-bg {
-    transform: scaleY(1);
-  }
-  
-  .arteur-subheader__caption {
-    font-family: var(--hero-font-body, sans-serif);
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.5);
-    padding-left: 0.5rem;
-  }
+.arteur-subheader {
+  position: relative;
+  background-color: var(--hero-ink);
+  padding: clamp(6rem, 12vh, 12rem) 0;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.arteur-subheader__bg-text {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  font-family: var(--hero-font-display);
+  font-size: clamp(10rem, 25vw, 30rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.02);
+  line-height: 0.8;
+  user-select: none;
+  pointer-events: none;
+  z-index: 0;
+  letter-spacing: -0.05em;
+}
+
+.arteur-subheader__dropcap {
+  float: left;
+  font-family: var(--hero-font-display);
+  font-size: clamp(6rem, 10vw, 8.5rem);
+  line-height: 0.75;
+  padding-top: 0.12em;
+  padding-right: 0.15em;
+  padding-bottom: 0.1em;
+  color: var(--hero-cream);
+  font-weight: 300;
+}
+
+.arteur-subheader__statement {
+  font-family: var(--hero-font-body);
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: justify;
+}
+
+.arteur-subheader__statement .highlight {
+  color: var(--color-arteur-white);
+  font-weight: 400;
+}
+
+.arteur-subheader__statement .italic {
+  font-family: var(--hero-font-display);
+  font-style: italic;
+  font-size: 1.25em;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.arteur-subheader__statement .italic.highlight {
+  color: var(--hero-cream);
+}
+
+.arteur-subheader__cta-text {
+  position: relative;
+  z-index: 2;
+  font-family: var(--hero-font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-arteur-white);
+  transition: color 0.4s ease;
+}
+
+.arteur-subheader__cta:hover .arteur-subheader__cta-text {
+  color: var(--hero-ink);
+}
+
+.arteur-subheader__cta-icon {
+  width: 1rem;
+  height: 1rem;
+  color: var(--hero-cream);
+  transition: color 0.4s ease;
+}
+
+.arteur-subheader__cta:hover .arteur-subheader__cta-arrow-box {
+  background: var(--hero-ink);
+  transform: translateX(4px);
+}
+
+.arteur-subheader__cta:hover .arteur-subheader__cta-icon {
+  color: var(--hero-cream);
+}
+
+.arteur-subheader__cta-hover-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--hero-cream);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 1;
+}
+
+.arteur-subheader__caption {
+  font-family: var(--hero-font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-muted-foreground);
+  padding-left: 0.5rem;
+}
