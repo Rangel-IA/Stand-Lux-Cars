@@ -361,21 +361,20 @@
   border-color: #ffffff;
 }
 
-/* Contact Section Mobile - Black Background */
 @media (max-width: 768px) {
   section#aplicacao.arteur-contact,
   .arteur-contact {
     background-color: #000000 !important;
     background-image: none !important;
   }
+  
+  .arteur-contact::before {
+    display: none;
+  }
 }
 
-/* Statement Section Mobile - Permanent Fix */
+/* Statement Section Mobile - Fujifilm Background */
 @media (max-width: 768px) {
-  .arteur-statement {
-    overflow: visible !important;
-  }
-  
   .arteur-statement__bg {
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/fujifilm.webp") !important;
     background-size: cover !important;
@@ -384,7 +383,6 @@
     background-repeat: no-repeat !important;
     display: block !important;
     opacity: 1 !important;
-    will-change: transform;
   }
   
   .arteur-statement__overlay {
