@@ -278,8 +278,8 @@
   font-weight: 500;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--hero-cream);
-  background: var(--hero-ink);
+  color: var(--hero-ink);
+  background: var(--hero-cream);
   text-decoration: none;
   overflow: hidden;
   transition: color 0.55s ease, background 0.55s ease;
@@ -289,7 +289,7 @@
 .arteur-hero__cta-bg {
   position: absolute;
   inset: 0;
-  background: var(--hero-cream);
+  background: var(--hero-ink);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
@@ -297,18 +297,23 @@
 }
 
 .arteur-hero__cta:hover {
-  color: var(--hero-ink);
+  color: var(--hero-cream);
 }
 
-.arteur-hero__cta:hover .arteur-hero__cta-bg { transform: scaleX(1); }
+.arteur-hero__cta:hover .arteur-hero__cta-bg { 
+  transform: scaleX(1); 
+}
 
+/* Seta com transition coordenada */
 .arteur-hero__cta-arrow {
   font-size: 1.1em;
-  transition: transform 0.4s ease;
+  color: var(--hero-ink);
+  transition: transform 0.4s ease, color 0.55s ease;
   display: inline-block;
 }
 
 .arteur-hero__cta:hover .arteur-hero__cta-arrow {
+  color: var(--hero-cream);
   transform: translateX(6px);
 }
 
