@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
-import andreImg from 'figma:asset/andre_rangel.png';
-import stefanoImg from 'figma:asset/stefano_raphael.png';
+import andreImg from '../../assets/andre_rangel.webp';
+import stefanoImg from '../../assets/stefano_raphael.webp';
 
 export default function FoundersSection() {
   const sectionRef = useRef<HTMLElement>(null);

@@ -1,0 +1,179 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   ARTEUR — Manifesto Section Styles
+   Aesthetic: Severe minimal editorial, extreme whitespace, brutalist elegance.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+   .arteur-manifesto {
+    position: relative;
+    background-color: var(--hero-ink, #0a0a0b);
+    padding: clamp(6rem, 15vh, 12rem) 0;
+    overflow: hidden;
+  }
+  
+  .arteur-manifesto__container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 clamp(1.5rem, 8vw, 8rem);
+    display: flex;
+    position: relative;
+  }
+  
+  /* ── Sidebar Typography ────────────────────────────────────────────────── */
+  .arteur-manifesto__sidebar {
+    display: none;
+    width: 5rem;
+    flex-shrink: 0;
+    position: relative;
+  }
+  
+  @media (min-width: 1024px) {
+    .arteur-manifesto__sidebar {
+      display: block;
+    }
+  }
+  
+  .arteur-manifesto__vertical-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg) translateX(-100%);
+    transform-origin: top left;
+    font-family: var(--hero-font-body, sans-serif);
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.15);
+    white-space: nowrap;
+  }
+  
+  .arteur-manifesto__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(4rem, 8vw, 6rem);
+  }
+  
+  /* ── Headline ─────────────────────────────────────────────────────────── */
+  .arteur-manifesto__title-wrap {
+    max-width: 900px;
+  }
+  
+  .arteur-manifesto__title {
+    font-family: var(--hero-font-display, serif);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 300;
+    color: #ffffff;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  
+  .arteur-manifesto__title-accent {
+    display: block;
+    font-style: italic;
+    color: var(--hero-cream, #E9E4D0);
+    margin-top: 0.25em;
+    /* Indent to create a stepped visual rhythm */
+    padding-left: clamp(2rem, 10vw, 8rem);
+  }
+  
+  /* ── Grid: Text and Visuals ─────────────────────────────────────────────── */
+  .arteur-manifesto__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(4rem, 8vw, 8rem);
+    align-items: end;
+  }
+  
+  @media (min-width: 768px) {
+    .arteur-manifesto__grid {
+      grid-template-columns: 10fr 12fr;
+    }
+  }
+  
+  /* ── Text Column ───────────────────────────────────────────────────────── */
+  .arteur-manifesto__text-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    padding-bottom: clamp(1rem, 5vw, 3rem);
+  }
+  
+  .arteur-manifesto__body {
+    font-family: var(--hero-font-body, sans-serif);
+    font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+    font-weight: 400;
+    line-height: 1.85;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: justify;
+  }
+  
+  .arteur-manifesto__signature {
+    margin-top: 3rem;
+    font-family: var(--hero-font-display, serif);
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--hero-cream, #E9E4D0);
+    opacity: 0.8;
+  }
+  
+  /* ── Visual Column (Framing & Effects) ─────────────────────────────────── */
+  .arteur-manifesto__image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: #111;
+    isolation: isolate;
+  }
+  
+  .arteur-manifesto__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(20%) contrast(1.1);
+  }
+  
+  /* The subtle inset border like an old photograph mount */
+  .arteur-manifesto__frame-border {
+    position: absolute;
+    inset: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+  /* Corner marks (crop marks) */
+  .arteur-manifesto__corner-tl,
+  .arteur-manifesto__corner-br {
+    position: absolute;
+    width: 1.5rem;
+    height: 1.5rem;
+    z-index: 3;
+    pointer-events: none;
+  }
+  
+  .arteur-manifesto__corner-tl {
+    top: 0.5rem;
+    left: 0.5rem;
+    border-top: 1px solid var(--hero-cream, #E9E4D0);
+    border-left: 1px solid var(--hero-cream, #E9E4D0);
+    opacity: 0.5;
+  }
+  
+  .arteur-manifesto__corner-br {
+    bottom: 0.5rem;
+    right: 0.5rem;
+    border-bottom: 1px solid var(--hero-cream, #E9E4D0);
+    border-right: 1px solid var(--hero-cream, #E9E4D0);
+    opacity: 0.5;
+  }
+  
+  /* Soft darkening at edges */
+  .arteur-manifesto__image-overlay {
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.6);
+    pointer-events: none;
+    z-index: 4;
+  }

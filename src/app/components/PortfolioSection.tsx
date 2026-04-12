@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import ferrariImg from '../../assets/ferrari-f40.jpg';
-import portofinoImg from '../../assets/ferrari-portofino.jpeg';
-import amalfiSpiderImg from '../../assets/ferrari_amalfi_spider.jpeg';
+import ferrariImg from '../../assets/ferrari-f40.webp';
+import portofinoImg from '../../assets/ferrari-portofino.webp';
+import amalfiSpiderImg from '../../assets/ferrari_amalfi_spider.webp';
 
 const portfolioItems = [
   {

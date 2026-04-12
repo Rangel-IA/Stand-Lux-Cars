@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import cameraBg from 'figma:asset/fujifilm.png';
+import cameraBg from '../../assets/fujifilm.webp';
 
 export default function StatementSection() {
   return (
