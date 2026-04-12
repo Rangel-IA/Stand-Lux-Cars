@@ -3,15 +3,14 @@
    Aesthetic: High-fashion editorial, asymmetric, cinematic.
    ─────────────────────────────────────────────────────────────────────────── */
 
-/* Local design tokens */
 :root {
-  --hero-cream:        #E9E4D0;
-  --hero-cream-dim:    rgba(233, 228, 208, 0.55);
-  --hero-ink:          #0a0a0b;
-  --hero-zinc-mid:     rgba(255, 255, 255, 0.18);
-  --hero-ticker-h:     44px;
-  --hero-font-display: 'Cormorant Garamond', 'Georgia', serif;
-  --hero-font-body:    'DM Sans', 'Helvetica Neue', sans-serif;
+  --hero-cream: var(--color-arteur-cream);
+  --hero-cream-dim: var(--color-arteur-cream-dim);
+  --hero-ink: var(--color-arteur-ink);
+  --hero-zinc-mid: rgba(255, 255, 255, 0.18);
+  --hero-ticker-h: 44px;
+  --hero-font-display: var(--font-arteur-display);
+  --hero-font-body: var(--font-arteur-body);
 }
 
 /* ── Shell ──────────────────────────────────────────────────────────────── */
