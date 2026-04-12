@@ -370,17 +370,24 @@
   }
 }
 
-/* Statement Section Mobile - Parallax Effect */
+/* Statement Section Mobile - Permanent Fix */
 @media (max-width: 768px) {
+  .arteur-statement {
+    overflow: visible !important;
+  }
+  
   .arteur-statement__bg {
-    background-attachment: fixed !important;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/fujifilm.webp") !important;
     background-size: cover !important;
     background-position: center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+    display: block !important;
+    opacity: 1 !important;
     will-change: transform;
-    opacity: 0.5 !important;
   }
   
   .arteur-statement__overlay {
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)) !important;
+    background: transparent !important;
   }
 }
