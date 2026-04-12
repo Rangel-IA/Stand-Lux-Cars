@@ -3,36 +3,36 @@ import { motion } from 'motion/react';
 import { ArrowRight, MoveHorizontal } from 'lucide-react';
 import './ExpertisePage.css';
 
-import amalfiBefore from '../../assets/ferrari_amalfi_spider.webp';
-import amalfiAfter from '../../assets/ferrari_amalfi_spider-d.webp';
-import f40Before from '../../assets/ferrari-f40.webp';
-import f40After from '../../assets/ferrari-f40-d.webp';
-import portofinoBefore from '../../assets/ferrari-portofino.webp';
-import portofinoAfter from '../../assets/ferrari-portofino-d.webp';
+// import amalfiBefore from '../../assets/ferrari_amalfi_spider.webp';
+// import amalfiAfter from '../../assets/ferrari_amalfi_spider-d.webp';
+// import f40Before from '../../assets/ferrari-f40.webp';
+// import f40After from '../../assets/ferrari-f40-d.webp';
+// import portofinoBefore from '../../assets/ferrari-portofino.webp';
+// import portofinoAfter from '../../assets/ferrari-portofino-d.webp';
 
 const comparisons = [
   {
     id: 1,
     title: 'Ferrari Amalfi Spider',
     subtitle: 'AI Precision Enhancement',
-    before: amalfiBefore,
-    after: amalfiAfter,
+    before: '/assets/ferrari_amalfi_spider.webp',
+    after: '/assets/ferrari_amalfi_spider-d.webp',
     description: 'Curadoria humana refina a iluminação original, revelando texturas e linhas icônicas que passam despercebidas na captura bruta. Cada superfície é otimizada para precisão editorial.'
   },
   {
     id: 2,
     title: 'Ferrari F40',
     subtitle: 'Engineering Prompt',
-    before: f40Before,
-    after: f40After,
+    before: '/assets/ferrari-f40.webp',
+    after: '/assets/ferrari-f40-d.webp',
     description: 'Engenharia de prompt preserva a autenticidade do modelo original enquanto eleva a apresentação visual para o padrão editorial de luxo. A síntese mantém a integridade da forma icônica.'
   },
   {
     id: 3,
     title: 'Ferrari Portofino',
     subtitle: 'Color Grading Intelligence',
-    before: portofinoBefore,
-    after: portofinoAfter,
+    before: '/assets/ferrari-portofino.webp',
+    after: '/assets/ferrari-portofino-d.webp',
     description: 'Recontextualização estratégica com gradação de cor que transforma uma fotografia técnica em ativo de marca premium. A IA entende contextoluxo, não apenas pixels.'
   }
 ];
