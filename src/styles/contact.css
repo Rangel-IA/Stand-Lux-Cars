@@ -365,7 +365,21 @@
 @media (max-width: 768px) {
   section#aplicacao.arteur-contact,
   .arteur-contact {
-    background-color: #ff0000 !important;
+    background-color: #d5d1bf !important;
     background-image: none !important;
+  }
+}
+
+/* Mobile Statement Background Fix */
+@media (max-width: 768px) {
+  .arteur-statement__bg {
+    background-attachment: scroll !important;
+    background-size: cover !important;
+    background-position: center !important;
+    opacity: 0.5 !important;
+  }
+  
+  .arteur-statement__overlay {
+    background: rgba(0, 0, 0, 0.7) !important;
   }
 }
