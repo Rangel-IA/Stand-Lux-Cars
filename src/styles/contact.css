@@ -370,12 +370,13 @@
   }
 }
 
-/* Statement Section Mobile - Subtle Gradient */
+/* Statement Section Mobile - Parallax Effect */
 @media (max-width: 768px) {
   .arteur-statement__bg {
-    background-attachment: scroll !important;
+    background-attachment: fixed !important;
     background-size: cover !important;
     background-position: center !important;
+    will-change: transform;
     opacity: 0.5 !important;
   }
   
