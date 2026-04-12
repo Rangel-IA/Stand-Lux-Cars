@@ -8,7 +8,6 @@ const MESSAGE = encodeURIComponent('Olá André, venho através do site Arteur e
 const WHATSAPP_URL = `https://wa.me/${PHONE_NUMBER}?text=${MESSAGE}`;
 
 export default function WhatsappWidget() {
-  const [showTooltip, setShowTooltip] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -19,51 +18,16 @@ export default function WhatsappWidget() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  useEffect(() => {
-    if (isMobile) return;
-
-    let scrollTimeout;
-    const handleScroll = () => {
-      setShowTooltip(true);
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => setShowTooltip(false), 3000);
-    };
-
-    const initialTimer = setTimeout(() => {
-      setShowTooltip(true);
-      const hideTimer = setTimeout(() => setShowTooltip(false), 3000);
-      return () => clearTimeout(hideTimer);
-    }, 2000);
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-
-    return () => {
-      clearTimeout(scrollTimeout);
-      clearTimeout(initialTimer);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [isMobile]);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-    if (!isMobile) setShowTooltip(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-    if (!isMobile) setShowTooltip(false);
-  };
-
   return (
     <div className="arteur-whatsapp-widget">
       <AnimatePresence mode="wait">
-        {!isMobile && showTooltip && (
+        {!isMobile && isHovered && (
           <motion.div
             className="arteur-whatsapp-tooltip"
             initial={{ opacity: 0, y: 10, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.95 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
           >
             <span>Consultoria Exclusiva:</span>
             <strong>Como posso ajudar?</strong>
@@ -78,8 +42,8 @@ export default function WhatsappWidget() {
         rel="noopener noreferrer"
         className="arteur-whatsapp-btn"
         aria-label="WhatsApp Consultoria"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        onMouseEnter={() => !isMobile && setIsHovered(true)}
+        onMouseLeave={() => !isMobile && setIsHovered(false)}
         whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
       >
