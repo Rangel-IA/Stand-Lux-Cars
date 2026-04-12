@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { MessageCircle } from 'lucide-react';
 import './WhatsappWidget.css';
 
-const PHONE_NUMBER = '5511999999999';
+const PHONE_NUMBER = '351936505168';
 const MESSAGE = encodeURIComponent('Olá André, venho através do site Arteur e gostaria de uma consultoria para um projeto high-end.');
 const WHATSAPP_URL = `https://wa.me/${PHONE_NUMBER}?text=${MESSAGE}`;
 

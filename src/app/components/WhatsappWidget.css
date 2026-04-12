@@ -1,4 +1,4 @@
-/* ARTEUR — WhatsApp Concierge Widget */
+/* ARTEUR — WhatsApp Concierge Widget - Liquid Glass */
 
 .arteur-whatsapp-widget {
   position: fixed;
@@ -17,70 +17,99 @@
   justify-content: center;
   width: 56px;
   height: 56px;
-  background: #0a0a0b;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  color: #E9E4D0;
+  color: #ffffff;
   text-decoration: none;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .arteur-whatsapp-btn:hover {
-  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.35);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
 }
 
+.arteur-whatsapp-btn svg {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Tooltip Glassmorphism */
 .arteur-whatsapp-tooltip {
   position: relative;
-  background: #0a0a0b;
-  color: #ffffff;
-  padding: 0.875rem 1rem;
-  border-radius: 8px;
+  background: rgba(10, 10, 11, 0.75);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
   font-size: 0.75rem;
   line-height: 1.4;
-  max-width: 180px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+  max-width: 200px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .arteur-whatsapp-tooltip span {
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.65rem;
+  color: rgba(233, 228, 208, 0.7);
+  font-size: 0.6rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
+  display: block;
+  margin-bottom: 0.25rem;
 }
 
 .arteur-whatsapp-tooltip strong {
   font-weight: 500;
-  color: #E9E4D0;
+  color: #ffffff;
+  font-size: 0.85rem;
+  display: block;
 }
 
 .arteur-whatsapp-tooltip-arrow {
   position: absolute;
-  bottom: -6px;
+  bottom: -8px;
   right: 20px;
-  width: 12px;
-  height: 12px;
-  background: #0a0a0b;
+  width: 14px;
+  height: 14px;
+  background: rgba(10, 10, 11, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   transform: rotate(45deg);
-  border-radius: 2px;
+  border-radius: 3px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Mobile Adjustments */
 @media (max-width: 768px) {
   .arteur-whatsapp-widget {
-    bottom: 1.5rem;
-    right: 1.5rem;
+    bottom: 1.25rem;
+    right: 1.25rem;
   }
 
   .arteur-whatsapp-btn {
-    width: 52px;
-    height: 52px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .arteur-whatsapp-btn svg {
+    width: 22px;
+    height: 22px;
   }
 
   .arteur-whatsapp-tooltip {
-    max-width: 160px;
-    font-size: 0.7rem;
+    max-width: 170px;
+    padding: 0.875rem 1rem;
+  }
+
+  .arteur-whatsapp-tooltip strong {
+    font-size: 0.8rem;
   }
 }
