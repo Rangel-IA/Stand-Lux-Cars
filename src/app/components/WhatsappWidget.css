@@ -40,8 +40,10 @@
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
-/* Tooltip - hidden by default, show on hover only */
+/* Tooltip - hidden by default, only shown on hover */
 .arteur-whatsapp-tooltip {
+  display: none !important;
+  opacity: 0 !important;
   position: relative;
   background: rgba(10, 10, 11, 0.85);
   backdrop-filter: blur(16px) saturate(180%);
@@ -53,17 +55,8 @@
   line-height: 1.4;
   max-width: 200px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  opacity: 0;
-  transform: translateY(10px) scale(0.95);
+  margin-bottom: 0.5rem;
   transition: all 0.3s ease-in-out;
-  pointer-events: none;
-}
-
-/* Show tooltip on button hover (desktop only) */
-.arteur-whatsapp-widget:hover .arteur-whatsapp-tooltip {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  pointer-events: auto;
 }
 
 .arteur-whatsapp-tooltip span {
@@ -90,30 +83,17 @@
   width: 14px;
   height: 14px;
   background: rgba(10, 10, 11, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   transform: rotate(45deg);
   border-radius: 3px;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.arteur-whatsapp-tooltip-arrow {
-  position: absolute;
-  bottom: -8px;
-  right: 20px;
-  width: 14px;
-  height: 14px;
-  background: rgba(10, 10, 11, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  transform: rotate(45deg);
-  border-radius: 3px;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+/* Show tooltip ONLY on hover */
+.arteur-whatsapp-widget:hover .arteur-whatsapp-tooltip {
+  display: block !important;
+  opacity: 1 !important;
 }
 
-/* Mobile Adjustments - No tooltip */
+/* Mobile - completely hidden */
 @media (max-width: 768px) {
   .arteur-whatsapp-widget {
     bottom: 1.25rem;
@@ -132,22 +112,11 @@
 
   .arteur-whatsapp-tooltip {
     display: none !important;
-  }
-}
-    height: 48px;
+    opacity: 0 !important;
   }
 
-  .arteur-whatsapp-btn svg {
-    width: 22px;
-    height: 22px;
-  }
-
-  .arteur-whatsapp-tooltip {
-    max-width: 170px;
-    padding: 0.875rem 1rem;
-  }
-
-  .arteur-whatsapp-tooltip strong {
-    font-size: 0.8rem;
+  .arteur-whatsapp-widget:hover .arteur-whatsapp-tooltip {
+    display: none !important;
+    opacity: 0 !important;
   }
 }
