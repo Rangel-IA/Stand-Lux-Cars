@@ -373,16 +373,10 @@
   }
 }
 
-/* Statement Section Mobile - Fujifilm Background */
+/* Statement Section Mobile - Scroll instead of fixed */
 @media (max-width: 768px) {
   .arteur-statement__bg {
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("/fujifilm.webp") !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-attachment: fixed !important;
-    background-repeat: no-repeat !important;
-    display: block !important;
-    opacity: 1 !important;
+    background-attachment: scroll !important;
   }
   
   .arteur-statement__overlay {

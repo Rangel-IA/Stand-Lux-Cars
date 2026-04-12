@@ -5,9 +5,13 @@ import cameraBg from '../../assets/fujifilm.webp';
 export default function StatementSection() {
   return (
     <section className="arteur-statement">
-      <div 
+      <motion.div 
         className="arteur-statement__bg" 
-        style={{ backgroundImage: `url(${cameraBg})` }}
+        style={{ 
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${cameraBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
         aria-hidden="true"
       />
       <div className="arteur-statement__overlay" aria-hidden="true" />
