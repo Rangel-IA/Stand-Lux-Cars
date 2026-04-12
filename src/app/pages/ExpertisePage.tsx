@@ -105,7 +105,7 @@ export default function ExpertisePage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
         >
-          <span className="expertise-hero__eyebrow">Processo de Produção</span>
+          <span className="expertise-hero__eyebrow">ARTEUR - Expertise V2.0</span>
           <h1 className="expertise-hero__title">Expertise <br/><em>Técnica</em></h1>
           <p className="expertise-hero__subtitle">
             A diferença entre uma fotografia e um ativo de marca. 
