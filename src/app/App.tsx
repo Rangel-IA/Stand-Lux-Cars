@@ -1,7 +1,7 @@
 import React from 'react';
+import { Routes, Route } from 'react-router';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronRight, Play, Camera, Star, ArrowRight } from 'lucide-react';
-
 
 import HeroSection from './components/HeroSection';
 import '../styles/hero.css';
@@ -24,35 +24,34 @@ import '../styles/header.css';
 import WhatsappWidget from './components/WhatsappWidget';
 import './components/WhatsappWidget.css';
 
-export default function App() {
+function ExpertisePlaceholder() {
+  return (
+    <div style={{ minHeight: '100vh', paddingTop: '100px', textAlign: 'center', color: '#fff', background: '#0a0a0b' }}>
+      <h1>Página em Construção</h1>
+    </div>
+  );
+}
 
+export default function App() {
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-50 selection:bg-zinc-800 selection:text-white font-sans overflow-x-hidden">
       <Header />
-
-      {/* HERO SECTION */}
-      <HeroSection />
-
-      {/* SUBHEADER & CTA SECTION */}
-      <SubheaderSection />
-
-      {/* MANIFESTO SECTION */}
-      <ManifestoSection />
-
-      {/* FOUNDERS SECTION */}
-      <FoundersSection />
-
-      {/* PORTFOLIO SHOWCASE */}
-      <PortfolioSection />
-
-      {/* QUALIFICATION / CONTACT SECTION */}
-      <ContactSection />
-
-      <StatementSection />
+      <Routes>
+        <Route path="/" element={
+          <>
+            <HeroSection />
+            <SubheaderSection />
+            <ManifestoSection />
+            <FoundersSection />
+            <PortfolioSection />
+            <ContactSection />
+            <StatementSection />
+          </>
+        } />
+        <Route path="/expertise" element={<ExpertisePlaceholder />} />
+      </Routes>
       <Footer />
       <WhatsappWidget />
     </div>
   );
 }
-
-
