@@ -361,16 +361,16 @@
   border-color: #ffffff;
 }
 
-/* Mobile Background Fix - RED TEST */
+/* Contact Section Mobile - Black Background */
 @media (max-width: 768px) {
   section#aplicacao.arteur-contact,
   .arteur-contact {
-    background-color: #d5d1bf !important;
+    background-color: #000000 !important;
     background-image: none !important;
   }
 }
 
-/* Mobile Statement Background Fix */
+/* Statement Section Mobile - Subtle Gradient */
 @media (max-width: 768px) {
   .arteur-statement__bg {
     background-attachment: scroll !important;
@@ -380,6 +380,6 @@
   }
   
   .arteur-statement__overlay {
-    background: rgba(0, 0, 0, 0.7) !important;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)) !important;
   }
 }
