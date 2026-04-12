@@ -361,30 +361,11 @@
   border-color: #ffffff;
 }
 
-/* Mobile Background Fix - with fallback test */
+/* Mobile Background Fix - RED TEST */
 @media (max-width: 768px) {
   section#aplicacao.arteur-contact,
   .arteur-contact {
-    background-image: url("/fujifilm.webp") !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-attachment: scroll !important;
-    background-repeat: no-repeat !important;
-    background-color: transparent !important;
-  }
-  
-  .arteur-contact::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(10, 10, 11, 0.85) !important;
-    z-index: 1;
-  }
-  
-  .arteur-contact__container,
-  .arteur-contact__header,
-  .arteur-contact__form-wrap {
-    position: relative;
-    z-index: 2;
+    background-color: #ff0000 !important;
+    background-image: none !important;
   }
 }
