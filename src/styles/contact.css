@@ -5,7 +5,7 @@
 
 .arteur-contact {
   position: relative;
-  background-color: var(--hero-ink);
+  background-color: var(--hero-ink, #0a0a0b);
   padding: clamp(6rem, 15vh, 12rem) 0;
   overflow: hidden;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -50,28 +50,28 @@
 
 .arteur-contact__eyebrow {
   display: block;
-  font-family: var(--hero-font-body);
+  font-family: var(--hero-font-body, sans-serif);
   font-size: 0.65rem;
   font-weight: 500;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: var(--hero-cream-dim);
+  color: var(--hero-cream, #E9E4D0);
   margin-bottom: 2rem;
-  opacity: 0.85;
+  opacity: 0.85; /* Increased visibility */
 }
 
 .arteur-contact__title {
-  font-family: var(--hero-font-display);
+  font-family: var(--hero-font-display, serif);
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 300;
-  color: var(--color-arteur-white);
+  color: #ffffff;
   line-height: 1.1;
   margin-bottom: 2rem;
 }
 
 .arteur-contact__title-italic {
   font-style: italic;
-  color: var(--hero-cream);
+  color: var(--hero-cream, #E9E4D0);
 }
 
 .arteur-contact__header-info {
@@ -81,11 +81,11 @@
 }
 
 .arteur-contact__description {
-  font-family: var(--hero-font-body);
+  font-family: var(--hero-font-body, sans-serif);
   font-size: clamp(0.95rem, 1.1vw, 1.05rem);
   font-weight: 300;
   line-height: 1.8;
-  color: var(--color-muted-foreground);
+  color: rgba(255, 255, 255, 0.65);
   max-width: 500px;
   text-align: justify;
   letter-spacing: 0.04em;
@@ -138,12 +138,12 @@
 }
 
 .arteur-form__label {
-  font-family: var(--hero-font-body);
+  font-family: var(--hero-font-body, sans-serif);
   font-size: 0.6rem;
   font-weight: 600;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--color-muted-foreground);
+  color: rgba(255, 255, 255, 0.5); /* Increased visibility */
   margin-bottom: 0.2rem;
 }
 
@@ -153,10 +153,10 @@
   border: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1.2rem 1.5rem;
-  font-family: var(--hero-font-body);
+  font-family: var(--hero-font-body, sans-serif);
   font-size: 0.95rem;
   font-weight: 300;
-  color: var(--color-arteur-white);
+  color: #ffffff;
   outline: none;
   transition: all 0.4s ease;
 }
@@ -173,7 +173,7 @@
 
 .arteur-form__input:focus,
 .arteur-form__textarea:focus {
-  border-color: var(--hero-cream);
+  border-color: var(--hero-cream, #E9E4D0);
   background: rgba(255, 255, 255, 0.06);
   padding-left: 1.8rem;
 }
@@ -232,20 +232,20 @@
 
 .arteur-budget-card__title {
   display: block;
-  font-family: var(--hero-font-body);
+  font-family: var(--hero-font-body, sans-serif);
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-arteur-white);
+  color: #ffffff;
   margin-bottom: 0.25rem;
 }
 
 .arteur-budget-card__desc {
-  font-family: var(--hero-font-body);
+  font-family: var(--hero-font-body, sans-serif);
   font-size: 0.65rem;
   font-weight: 300;
-  color: var(--color-muted-foreground);
+  color: rgba(255, 255, 255, 0.6); /* Increased visibility */
   line-height: 1.4;
 }
 
@@ -301,7 +301,7 @@
 
 .arteur-modal-content {
   position: relative;
-  background: var(--hero-ink);
+  background: #0a0a0b;
   border: 1px solid rgba(255, 255, 255, 0.1);
   width: 100%;
   max-width: 480px;
@@ -316,7 +316,7 @@
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  color: var(--color-muted-foreground);
+  color: rgba(255, 255, 255, 0.4);
   background: none;
   border: none;
   cursor: pointer;
@@ -324,31 +324,36 @@
 }
 
 .arteur-modal-close:hover {
-  color: var(--color-arteur-white);
+  color: #ffffff;
+}
+
+.arteur-modal-icon-wrap {
+  margin-bottom: 2rem;
+  opacity: 0.8;
 }
 
 .arteur-modal-title {
-  font-family: var(--hero-font-display);
+  font-family: var(--hero-font-display, serif);
   font-size: 2rem;
-  color: var(--color-arteur-white);
+  color: #ffffff;
   margin-bottom: 1.5rem;
   font-weight: 300;
 }
 
 .arteur-modal-text {
-  font-family: var(--hero-font-body);
+  font-family: var(--hero-font-body, sans-serif);
   font-size: 0.9rem;
   line-height: 1.6;
-  color: var(--color-muted-foreground);
+  color: rgba(255, 255, 255, 0.5);
   margin-bottom: 2.5rem;
 }
 
 .arteur-modal-btn {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: var(--color-arteur-white);
+  color: #ffffff;
   padding: 1rem 2rem;
-  font-family: var(--hero-font-body);
+  font-family: var(--hero-font-body, sans-serif);
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.25em;
@@ -357,7 +362,7 @@
 }
 
 .arteur-modal-btn:hover {
-  background: var(--color-arteur-white);
-  color: var(--hero-ink);
-  border-color: var(--color-arteur-white);
+  background: #ffffff;
+  color: #000;
+  border-color: #ffffff;
 }

@@ -47,6 +47,13 @@ For example:
 You can also create sub sections and add more specific details
 For example:
 
+# Workflow & GitHub Automation
+
+- **GitHub Management**: Use a skill em `.agents/skills/github-project-management` via API (PAT) para gerenciar o repositório.
+- **Automação de Issues**: Sempre que iniciar uma tarefa, verifique a Issue correspondente. Ao concluir, marque o checklist no GitHub e mova o card para "Done".
+- **Commits Semânticos**: Realize commits automáticos após melhorias confirmadas, usando mensagens profissionais (ex: `feat:`, `fix:`, `perf:`).
+- **Relatórios**: Após grandes alterações, gere um breve resumo do que foi concluído e o que ainda está pendente no backlog.
+
 ## Button
 
 The Button component is a fundamental interactive element in our design system, designed to trigger actions or navigate

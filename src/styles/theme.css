@@ -118,13 +118,18 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   
-  /* ARTEUR Design Tokens */
-  --color-arteur-cream: #E9E4D0;
-  --color-arteur-cream-dim: rgba(233, 228, 208, 0.55);
-  --color-arteur-ink: #0a0a0b;
-  --color-arteur-white: #ffffff;
-  --font-arteur-display: 'Cormorant Garamond', 'Georgia', serif;
-  --font-arteur-body: 'DM Sans', 'Helvetica Neue', sans-serif;
+  /* ARTEUR Design Tokens - with fallbacks */
+  --color-arteur-cream: var(--arteur-cream, #E9E4D0);
+  --color-arteur-cream-dim: var(--arteur-cream-dim, rgba(233, 228, 208, 0.55));
+  --color-arteur-ink: var(--arteur-ink, #0a0a0b);
+  --color-arteur-white: var(--arteur-white, #ffffff);
+  --font-arteur-display: var(--arteur-font-display, 'Cormorant Garamond', 'Georgia', serif);
+  --font-arteur-body: var(--arteur-font-body, 'DM Sans', 'Helvetica Neue', sans-serif);
+  
+  /* CTA Tokens */
+  --cta-primary-bg: var(--cta-primary-bg, #E9E4D0);
+  --cta-primary-hover: var(--cta-primary-hover, #ffffff);
+  --cta-primary-text: var(--cta-primary-text, #0a0a0b);
 }
 
 @layer base {

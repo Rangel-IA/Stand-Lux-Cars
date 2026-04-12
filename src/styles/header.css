@@ -15,7 +15,7 @@
 
 .arteur-header.is-scrolled {
   padding: 1.25rem 0;
-  background-color: var(--hero-ink);
+  background-color: rgba(10, 10, 11, 0.75);
   backdrop-filter: blur(15px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -59,8 +59,8 @@
 .arteur-header__link {
   position: relative;
   text-decoration: none;
-  color: var(--color-muted-foreground);
-  font-family: var(--hero-font-body);
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--hero-font-body, sans-serif);
   font-size: 0.65rem;
   font-weight: 500;
   letter-spacing: 0.3em;
@@ -70,7 +70,7 @@
 }
 
 .arteur-header__link:hover {
-  color: var(--color-arteur-white);
+  color: #ffffff;
 }
 
 .link-line {
@@ -92,33 +92,33 @@
 
 .arteur-header__cta {
   text-decoration: none;
-  font-family: var(--hero-font-body);
+  font-family: var(--hero-font-body, sans-serif);
   font-size: 0.55rem;
   font-weight: 600;
   letter-spacing: 0.3em;
-  color: var(--color-arteur-white);
+  color: #ffffff;
   padding: 0.9rem 1.8rem;
   border: 1px solid rgba(255, 255, 255, 0.15);
   transition: all 0.4s ease;
 }
 
 .arteur-header__cta:hover {
-  background: var(--color-arteur-white);
-  color: var(--hero-ink);
-  border-color: var(--color-arteur-white);
+  background: rgba(255, 255, 255, 1);
+  color: #000;
+  border-color: #ffffff;
 }
 
 /* ── Mobile Trigger ───────────────────────────────────────────────────── */
 .arteur-header__mobile-trigger {
   background: none;
   border: none;
-  color: var(--color-muted-foreground);
+  color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .arteur-header__mobile-trigger:hover {
-  color: var(--color-arteur-white);
+  color: #ffffff;
 }
 
 @media (min-width: 1024px) {
@@ -138,29 +138,8 @@
 .arteur-mobile-menu__bg {
   position: absolute;
   inset: 0;
-  background: var(--hero-ink);
+  background: #0a0a0b;
   z-index: -1;
-}
-
-.arteur-mobile-menu__close {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  background: none;
-  border: none;
-  color: var(--color-muted-foreground);
-  cursor: pointer;
-  z-index: 10;
-}
-
-.arteur-mobile-menu__link {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  text-decoration: none;
-  color: var(--color-arteur-white);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  padding-bottom: 1rem;
 }
 
 .arteur-mobile-menu__close {
@@ -212,11 +191,11 @@
 }
 
 .arteur-mobile-menu__footer p {
-  font-family: var(--hero-font-body);
+  font-family: var(--hero-font-body, sans-serif);
   font-size: 0.55rem;
   text-transform: uppercase;
   letter-spacing: 0.3em;
-  color: var(--color-muted-foreground);
+  color: rgba(255, 255, 255, 0.2);
   margin-bottom: 1rem;
 }
 
