@@ -76,7 +76,7 @@ export default function Header() {
             </button>
 
             <nav className="arteur-mobile-menu__nav">
-              {[...navLinks, { name: 'Aplicação', href: '#aplicacao' }].map((link, i) => (
+              {[...navLinks, { name: 'Expertise', href: 'https://expertise.arteur-cars.vercel.app' }, { name: 'Aplicação', href: '#aplicacao' }].map((link, i) => (
                 <motion.a 
                   key={link.href}
                   href={link.href}
