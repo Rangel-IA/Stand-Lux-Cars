@@ -9,7 +9,7 @@ const comparisons = [
     title: 'Ferrari Amalfi Spider',
     subtitle: 'AI Precision Enhancement',
     before: '/assets/ferrari_amalfi_spider.webp',
-    after: '/assets/ferrari_amalfi_spider.webp',
+    after: '/assets/ferrari_amalfi_spider-d.webp',
     description: 'Curadoria humana refina a iluminação original, revelando texturas e linhas icônicas que passam despercebidas na captura bruta.'
   },
   {
@@ -17,7 +17,7 @@ const comparisons = [
     title: 'Ferrari F40',
     subtitle: 'Engineering Prompt',
     before: '/assets/ferrari-f40.webp',
-    after: '/assets/ferrari-f40.webp',
+    after: '/assets/ferrari-f40-d.webp',
     description: 'Engenharia de prompt preserva a autenticidade do modelo original enquanto eleva a apresentação visual para o padrão editorial de luxo.'
   },
   {
@@ -25,7 +25,7 @@ const comparisons = [
     title: 'Ferrari Portofino',
     subtitle: 'Color Grading Intelligence',
     before: '/assets/ferrari-portofino.webp',
-    after: '/assets/ferrari-portofino.webp',
+    after: '/assets/ferrari-portofino-d.webp',
     description: 'Recontextualização estratégica com gradação de cor que transforma uma fotografia técnica em ativo de marca premium.'
   }
 ];
