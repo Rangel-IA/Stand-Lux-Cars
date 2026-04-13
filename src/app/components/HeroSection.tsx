@@ -186,7 +186,7 @@ export default function HeroSection() {
         >
           <a
             id="hero-cta-primary"
-            href="#aplicacao"
+            href="/#aplicacao"
             className="arteur-hero__cta"
           >
             <span className="arteur-hero__cta-text">Qualifique sua Marca</span>
@@ -196,7 +196,7 @@ export default function HeroSection() {
 
           <a
             id="hero-cta-secondary"
-            href="#manifesto"
+            href="/#manifesto"
             className="arteur-hero__cta-ghost"
           >
             Descubra o Método

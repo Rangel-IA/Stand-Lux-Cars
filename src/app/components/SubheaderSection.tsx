@@ -52,7 +52,7 @@ export default function SubheaderSection() {
               className="arteur-subheader__cta-container"
             >
               <a 
-                href="#aplicacao"
+                href="/#aplicacao"
                 className="arteur-subheader__cta"
               >
                 <span className="arteur-subheader__cta-text">Qualifique sua Marca</span>
