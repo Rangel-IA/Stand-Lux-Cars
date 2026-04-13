@@ -21,6 +21,9 @@ build/
 *.jpeg
 *.webp
 *.gif
+
+# Exception for expertise comparison images in public
+!public/assets/*.webp
 *.svg
 *.ico
 *.pdf
