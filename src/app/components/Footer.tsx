@@ -35,7 +35,6 @@ export default function Footer() {
               <li><a href="#manifesto">O Método</a></li>
               <li><a href="#fundadores">A Dupla</a></li>
               <li><a href="#portifolio">Portfólio</a></li>
-              <li><a href="https://expertise.arteur-cars.vercel.app">Expertise</a></li>
             </ul>
           </nav>
 

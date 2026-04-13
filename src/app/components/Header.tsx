@@ -19,7 +19,6 @@ export default function Header() {
     { name: 'O Método', href: '#manifesto' },
     { name: 'A Dupla', href: '#fundadores' },
     { name: 'Portfólio', href: '#portifolio' },
-    { name: 'Expertise', href: 'https://expertise.arteur-cars.vercel.app' },
   ];
 
   return (
