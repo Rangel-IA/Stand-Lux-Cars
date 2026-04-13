@@ -1,43 +1,31 @@
 import React, { useState, useRef } from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight, MoveHorizontal } from 'lucide-react';
-import amalfiBeforeImg from '../../assets/ferrari_amalfi_spider.webp';
-import amalfiAfterImg from '../../assets/ferrari_amalfi_spider-d.webp';
-import f40BeforeImg from '../../assets/ferrari-f40.webp';
-import f40AfterImg from '../../assets/ferrari-f40-d.webp';
-import portofinoBeforeImg from '../../assets/ferrari-portofino.webp';
-import portofinoAfterImg from '../../assets/ferrari-portofino-d.webp';
 import './ExpertisePage.css';
-
-const imageCache = [
-  amalfiBeforeImg, amalfiAfterImg,
-  f40BeforeImg, f40AfterImg,
-  portofinoBeforeImg, portofinoAfterImg
-];
 
 const comparisons = [
   {
     id: 1,
     title: 'Ferrari Amalfi Spider',
     subtitle: 'AI Precision Enhancement',
-    before: amalfiBeforeImg,
-    after: amalfiAfterImg,
+    before: '/assets/ferrari_amalfi_spider.webp',
+    after: '/assets/ferrari_amalfi_spider-d.webp',
     description: 'Curadoria humana refina a iluminação original, revelando texturas e linhas icônicas que passam despercebidas na captura bruta.'
   },
   {
     id: 2,
     title: 'Ferrari F40',
     subtitle: 'Engineering Prompt',
-    before: f40BeforeImg,
-    after: f40AfterImg,
+    before: '/assets/ferrari-f40.webp',
+    after: '/assets/ferrari-f40-d.jpg',
     description: 'Engenharia de prompt preserva a autenticidade do modelo original enquanto eleva a apresentação visual para o padrão editorial de luxo.'
   },
   {
     id: 3,
     title: 'Ferrari Portofino',
     subtitle: 'Color Grading Intelligence',
-    before: portofinoBeforeImg,
-    after: portofinoAfterImg,
+    before: '/assets/ferrari-portofino.webp',
+    after: '/assets/ferrari-portofino-d.jpeg',
     description: 'Recontextualização estratégica com gradação de cor que transforma uma fotografia técnica em ativo de marca premium.'
   }
 ];
