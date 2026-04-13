@@ -16,10 +16,10 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { name: 'O Método', href: '/#manifesto' },
-    { name: 'A Dupla', href: '/#fundadores' },
-    { name: 'Portfólio', href: '/#portifolio' },
-    { name: 'Expertise', href: '/expertise' },
+    { name: 'O Método', href: '#manifesto' },
+    { name: 'A Dupla', href: '#fundadores' },
+    { name: 'Portfólio', href: '#portifolio' },
+    { name: 'Expertise', href: 'https://expertise.arteur-cars.vercel.app' },
   ];
 
   return (
@@ -76,7 +76,7 @@ export default function Header() {
             </button>
 
             <nav className="arteur-mobile-menu__nav">
-              {[...navLinks, { name: 'Aplicação', href: '#aplicacao' }, { name: 'Expertise', href: '/expertise' }].map((link, i) => (
+              {[...navLinks, { name: 'Aplicação', href: '#aplicacao' }].map((link, i) => (
                 <motion.a 
                   key={link.href}
                   href={link.href}

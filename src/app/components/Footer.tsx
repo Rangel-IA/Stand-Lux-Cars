@@ -32,10 +32,10 @@ export default function Footer() {
           <nav className="arteur-footer__col-nav">
             <h4 className="arteur-footer__col-label">Navegação</h4>
             <ul className="arteur-footer__nav-list">
-              <li><a href="/#manifesto">O Método</a></li>
-              <li><a href="/#fundadores">A Dupla</a></li>
-              <li><a href="/#portifolio">Portfólio</a></li>
-              <li><a href="/#aplicacao">Aplicação</a></li>
+              <li><a href="#manifesto">O Método</a></li>
+              <li><a href="#fundadores">A Dupla</a></li>
+              <li><a href="#portifolio">Portfólio</a></li>
+              <li><a href="https://expertise.arteur-cars.vercel.app">Expertise</a></li>
             </ul>
           </nav>
 
