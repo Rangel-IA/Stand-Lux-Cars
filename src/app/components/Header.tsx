@@ -19,6 +19,7 @@ export default function Header() {
     { name: 'O Método', href: '#manifesto' },
     { name: 'A Dupla', href: '#fundadores' },
     { name: 'Portfólio', href: '#portifolio' },
+    { name: 'Expertise', href: 'https://expertise.arteur-cars.vercel.app' },
   ];
 
   return (
@@ -39,7 +40,7 @@ export default function Header() {
             </a>
           ))}
           
-          <a href="/#aplicacao" className="arteur-header__cta">
+          <a href="#aplicacao" className="arteur-header__cta">
             QUALIFIQUE SUA MARCA
           </a>
         </nav>
