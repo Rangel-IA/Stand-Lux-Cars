@@ -111,7 +111,7 @@ export default function FoundersSection() {
               </p>
               <div className="arteur-founders__divider" aria-hidden="true" />
               <p className="arteur-founders__bio">
-                Com duas décadas na vanguarda da fotografia de moda internacional, Stefano funde sensibilidade óptica e iluminação cinemática com engenharia de precisão. Ele não apenas comanda a IA; ele a dirige como um arsenal ilimitado, criando setups e composições que só um mestre da luz poderia conceber. Sua assinatura é a síntese perfeita entre a alma da fotografia clássica e o poder da vanguarda gerativa.
+                Com duas décadas na vanguarda da fotografia de moda internacional, Stefano funde sensibilidade óptica e iluminação cinemática com engenharia de precisão. Ele não apenas comanda a IA; ele a dirige como um arsenal ilimitado, criando setups e composições que só um mestre da luz poderia conceber. Sua assinatura é a síntese perfeita entre a alma da fotografia clássica e o poder da vanguarda generativa.
               </p>
             </div>
           </motion.article>

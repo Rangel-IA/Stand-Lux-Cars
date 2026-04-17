@@ -24,7 +24,7 @@ export default function ManifestoSection() {
             <h2 className="arteur-manifesto__title">
               O que antes exigia<br /> quinze dias e dezenas<br /> de profissionais,
               <span className="arteur-manifesto__title-accent"> 
-                nós redefinimos com mestria.
+                nós redefinimos com maestria.
               </span>
             </h2>
           </motion.div>
