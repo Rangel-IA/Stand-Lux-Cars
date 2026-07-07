@@ -1,11 +1,20 @@
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-  # Landing page para serviço premium
+# Run and deploy your AI Studio app
 
-  This is a code bundle for Landing page para serviço premium. The original project is available at https://www.figma.com/design/8WbJoB18jQUnMkqJUCpVsR/Landing-page-para-servi%C3%A7o-premium.
+This contains everything you need to run your app locally.
 
-  ## Running the code
+View your app in AI Studio: https://ai.studio/apps/1ae5e099-5772-4774-b324-bbb83a90f389
 
-  Run `npm i` to install the dependencies.
+## Run Locally
 
-  Run `npm run dev` to start the development server.
-  
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
